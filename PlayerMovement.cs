@@ -27,11 +27,6 @@ public class PlayerMovement : MonoBehaviour
             mousePosition.y - transform.position.y
         );
 
-        Vector2 moveDirection = new Vector2(
-            mousePosition.x - transform.position.x * moveSpeed,
-            mousePosition.y - transform.position.y * moveSpeed
-        );
-
         transform.up = direction;
         if(Input.GetMouseButton(0)){
             rb.AddForce(direction);
